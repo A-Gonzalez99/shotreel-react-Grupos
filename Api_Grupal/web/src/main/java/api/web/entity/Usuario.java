@@ -1,11 +1,6 @@
 package api.web.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Version;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Size;
 import javax.validation.constraints.NotBlank;
@@ -22,6 +17,10 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_usuario;
+
+    @Lob
+    @Column(name = "datos", columnDefinition = "LONGBLOB")
+    private byte[] datos;
 
     @NotBlank(message = "El nombre no puede estar vacío")
     @Size(min = 3, max = 50, message = "El nombre debe tener entre 3 y 50 caracteres")
@@ -55,6 +54,13 @@ public class Usuario {
     
     public void setId_usuario(Long id_usuario) {
         this.id_usuario = id_usuario;
+    }
+
+    public byte[] getDatos() {
+        return datos;
+    }
+    public void setDatos(byte[] datos) {
+        this.datos = datos;
     }
     
     public String getNombre() {
