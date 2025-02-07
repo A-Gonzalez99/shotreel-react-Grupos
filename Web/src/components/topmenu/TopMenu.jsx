@@ -25,6 +25,8 @@ function TopMenu() {
     <>
       <div className="panelTop">
         <ButtonTopMenu buttonId="button-menu" referen={button} icon="menu" click={()=>sowMenu()}/>
+        <ButtonTopMenu buttonId="button-settings" icon="info"  click={() => navigate("/html")}/>
+
         <ButtonTopMenu buttonId="button-settings" icon="account_circle"  click={() => navigate("/usersettings")}/>
       </div>
 

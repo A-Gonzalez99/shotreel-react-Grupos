@@ -16,6 +16,7 @@ import { Login } from './pages/Login';
 import { NewAccount } from './pages/NewAccount';
 import { Proyect } from './pages/Proyect';
 import { EditProyect } from './pages/EditProyect';
+import HtmlIframe from './pages/HtmlIframe';
 
 function App() {
   return (
@@ -38,8 +39,9 @@ function App() {
         <Route path='/newaccount' element={<NewAccount/>}/>
         <Route path='/proyect' element={<Proyect/>}/>
         <Route path='/editproyect' element={<EditProyect/>}/>
-
-        <Route path="*" element={<Login/>}/>
+        <Route path='/html' element={<HtmlIframe url="./DocumentaciónHTML/Sistema de ayuda para ShotReel.html" />}/>
+      
+        {/* <Route path="*" element={<Login/>}/> */}
       </Routes>
     </BrowserRouter>
   );
