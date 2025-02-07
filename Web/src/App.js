@@ -39,9 +39,9 @@ function App() {
         <Route path='/newaccount' element={<NewAccount/>}/>
         <Route path='/proyect' element={<Proyect/>}/>
         <Route path='/editproyect' element={<EditProyect/>}/>
-        <Route path='/html' element={<HtmlIframe url="./DocumentaciónHTML/Sistema de ayuda para ShotReel.html" />}/>
+        <Route path='/Documentation' element={<HtmlIframe />}/>
       
-        {/* <Route path="*" element={<Login/>}/> */}
+        <Route path="*" element={<Login/>}/>
       </Routes>
     </BrowserRouter>
   );
